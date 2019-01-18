@@ -132,3 +132,21 @@ Processing by PostsController#create as HTML
   [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
 Redirected to http://174.138.35.103:49556/posts/3
 Completed 302 Found in 10ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/3" for 190.102.85.251 at 2019-01-18 21:54:28 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts" for 190.102.85.251 at 2019-01-18 21:54:50 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PdRmSeb3WTXy58rcUL0Rpp/T1aZW65GFrcXjXlAQCi3AfTomvhsnsp7AHepBBfzeGGan/8Qn8N6pgo4yewUrRQ==", "title"=>"Blackyyyyyyyyyyyyy", "description"=>"Sa", "commit"=>"Submit Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Blackyyyyyyyyyyyyy"], ["description", "Sa"], ["created_at", "2019-01-18 21:54:50.831782"], ["updated_at", "2019-01-18 21:54:50.831782"]]
+  [1m[36m (43.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://174.138.35.103:49556/posts/4
+Completed 302 Found in 46ms (ActiveRecord: 43.6ms)
